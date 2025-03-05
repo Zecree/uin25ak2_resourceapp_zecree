@@ -1,0 +1,31 @@
+#resource-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  flex-wrap: nowrap;
+  text-align: left;
+  padding: 50px;
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  min-height: 400px;
+}
+
+h2 {
+  color: #2A324B;
+  margin-bottom: 10px;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  color: #58699D;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #8a9fdd;
+}
