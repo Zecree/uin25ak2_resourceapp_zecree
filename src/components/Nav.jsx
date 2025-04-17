@@ -1,27 +1,20 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/nav.scss";
 
 const Nav = () => {
-  const location = useLocation();
-
   return (
-    <nav>
-      <ul>
-        {[
-          { path: "/html", label: "HTML" },
-          { path: "/css", label: "CSS" },
-          { path: "/javascript", label: "JavaScript" },
-          { path: "/react", label: "React" },
-          { path: "/sanity", label: "Sanity and headless CMS" },
-        ].map(({ path, label }) => (
-          <li key={path}>
-            <Link to={path} className={location.pathname === path ? "tab active" : "tab"}>
-              {label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <nav className="nav">
+      <div className="nav-left">
+        <Link to="/">Team :c</Link>
+      </div>
+      <div className="nav-right">
+        <Link to="/">Hjem</Link>
+        <Link to="/marcus1">Marcus 1</Link>
+        <Link to="/marcus2">Marcus 2</Link>
+        <Link to="/marcus3">Marcus 3</Link>
+        <Link to="/marcus4">Marcus 4</Link>
+      </div>
     </nav>
   );
 };

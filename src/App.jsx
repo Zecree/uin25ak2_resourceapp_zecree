@@ -1,22 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import Resources from "./components/Resources";
-import "./styles/main.scss";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Marcus1 from "./pages/Marcus1";
+import Marcus2 from "./pages/Marcus2";
+import Marcus3 from "./pages/Marcus3";
+import Marcus4 from "./pages/Marcus4";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/html" element={<Resources category="HTML" />} />
-          <Route path="/css" element={<Resources category="CSS" />} />
-          <Route path="/javascript" element={<Resources category="JavaScript" />} />
-          <Route path="/react" element={<Resources category="React" />} />
-          <Route path="/sanity" element={<Resources category="Sanity and headless CMS" />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/marcus1" element={<Marcus1 />} />
+        <Route path="/marcus2" element={<Marcus2 />} />
+        <Route path="/marcus3" element={<Marcus3 />} />
+        <Route path="/marcus4" element={<Marcus4 />} />
+      </Routes>
+    </>
   );
 }
 
